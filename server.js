@@ -15,6 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 let dbUrl = dbConfig.url;
 
+//to use a different db for unit tests
 if(app.get('env') === 'test'){
      dbUrl = dbConfigTest.url;
 }

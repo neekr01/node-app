@@ -63,7 +63,8 @@ describe('Unit tests for node app', () => {
             .post('/user')
             .send(user)
             .end((err, res) => {
-            res.should.have.status(400);
+            res.should.have.status(200);
+            res.should.be.a.toString("User validation failed: city: Path `city` is required")
             done();
         })
     });
@@ -76,7 +77,8 @@ describe('Unit tests for node app', () => {
             .post('/user')
             .send(user)
             .end((err, res) => {
-            res.should.have.status(400);
+            res.should.have.status(200);
+            res.should.be.a.toString("User validation failed: name: Path `name` is required")
             done();
         })
     });

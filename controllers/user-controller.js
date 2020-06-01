@@ -11,18 +11,7 @@ exports.findAll = async (req, res) => {
     }
 
 exports.create = async (req, res) => {
-    if(!req.body.name){
-        res.status(400).send({
-            message: "Request body should contain name field of type String"
-        });
-    }
-
-    if(!req.body.city){
-        res.status(400).send({
-            message: "Request body should contain city field of type String"
-        });
-    }
-
+    
    const user = new User(req.body);
 
     try{
