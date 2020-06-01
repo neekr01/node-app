@@ -1,0 +1,22 @@
+{
+  "name": "node-app",
+  "version": "1.0.0",
+  "description": "A demo app",
+  "main": "server.js",
+  "scripts": {
+    "test": "nyc mocha --exit test/"
+  },
+  "author": "Neeraj",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.16"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^7.2.0",
+    "nyc": "^15.0.1"
+  }
+}
